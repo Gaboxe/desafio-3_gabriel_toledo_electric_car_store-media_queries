@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    grid-area: cabecera;
+    background: #213f8f;
+}
+
+.prueba-uno {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    grid-area: filtros-de-busqueda;
+}
+
+main {
+    grid-area: seccion-principal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    grid-area: pie-de-pagina;
+    display: flex;
+    flex-direction: column;
+    background-color: #00237F;
+    color: #fff;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.face-inst a {
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 18% 61% 10%;
+    
+    grid-template-areas: 
+    'cabecera'
+    'filtros-de-busqueda'
+    'seccion-principal'
+    'pie-de-pagina';
+
+    height: 100vh;
+}
+
+/* header, form, main, footer {
+    border: solid 1px black;
+} */
+
+h2 {
+    margin: 24px 0;
+    color: #fff;
+}
+
+h3 {
+    margin: 6px 0;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin: auto;
+}
+
+.modelo {
+    text-align: center;
+    margin: 16px 0 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .60) ;
+
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 320px;
+}
+
+.car-img {
+    width: 260px;
+    margin-bottom: 23px;
+}
+
+.car {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #213f8f;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+button:hover {
+    background-color: #4c6885;
+}
+
+button:focus {
+    background-color: #90a0b1;
+}
+
+.img-logo {
+    height: 26px;
+    width: 28px;
+    margin: 24px 12px auto 13px;
+}
+
+.logotipo {
+    display: flex;
+}
+
+.articulos {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 16px;
+
+
+    padding: 10px 0;
+
+}
+
+.txt-footer {
+    margin: 6px 0;
+}
+
+/* INICIO ======================== Pagination ==================== */
+.selec-de-pagina {
+    display: flex;
+    justify-content: center;
+}
+
+.paginas {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+
+    border-radius: 5px;
+    border: 1px solid #000;
+    
+    margin: 10px 0;
+}
+
+.paginas li {
+    margin: 0;
+    
+}
+
+.paginas .next, .dos {
+    
+    border-left: #000 solid 1px;
+}
+
+.paginas .after, .dos {
+    border-right: #000 solid 1px;
+}
+
+.link--pag {
+    display: block;
+    padding: 12px 15px;
+}
+
+.link--pag:hover {
+    background-color: #213f8f;
+    color: #fff;
+}
+
+/* FINAL ======================== Pagination ==================== */
+
+/* INICIO ========================================== ESTYLO PARA EL MENU MOVIL */
+
+
+.nav__link {
+    color: #fff;
+    display: block; /* se les da un 'display: block' para darles un margen*/
+    padding: 0.94rem 0 ;
+    text-decoration: none;
+}
+
+.nav__link--inside {
+    border-radius: 6px;
+    
+    text-align: center;
+}
+
+.nav__link--inside:hover {
+    background: #f6f8fa;
+    color: #000;
+}
+
+.list__button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+    
+    margin: auto 20px;
+    height: 2rem;
+}
+
+.active .flecha { /* cuando 'arrow' como clase aparesca su hijo 'list__arrow' */
+    transform: rotate(90deg); /* sufrira una transformacion con una rotacion de 90° */
+}
+
+.list__arrow {
+    margin-left: auto;
+    transition: trasform .3s;
+}
+
+.list__show {
+
+    list-style: none;
+    transition: height .4s; /* esto hara que se anime cuando cambie el height */
+    height: 0;
+    padding: 0;
+
+
+    display: none; /*con esto oculto la lista*/
+}
+
+.list__show.arrow { 
+    display: block;
+    height: 100%;
+}
+
+.list__item {
+
+    overflow: hidden;
+ 
+}
+
+/* FINAL ==================================================ESTYLO PARA EL MENU MOVIL */
+
+/* INICIO ==================================================ESTYLO PARA SELECTBOX */
+a {
+    text-decoration: none;
+}
+.selectbox {
+    width: 80%; 
+    margin: auto; /* con esto lo centro */
+    position: relative; /**/
+}
+
+.select {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background: #fff;
+    width: 100%; /*me aseguro que habarque el 100%*/
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16) ; /* .16 corresponde a la transparencia*/
+    border-radius: 10px;
+    cursor: pointer;
+    
+    transition: .2s ease all; /*es para la animacion*/
+    margin-bottom: 30px;
+    /* padding: 12px; */
+    padding: 5px;
+    position: relative; /*esto es para el icono inferior al desplegar*/
+    z-index: 200; /*esto es pra que el selectbox quede por sobre otro elento en la pagina*/
+    border: 2px solid transparent;
+    height: 67px; /**/
+}
+
+.select.active, .select:hover { /* == la clase active es para cuando el cursor esta activo (se hizo un click) osea esta expandido y ademas muestra la sombra. el hover es para que al pasar el cursor la muestre */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    border: 2px solid #213f8f;
+}
+
+.select.active:before { /*seudo elemento ':before' representa un 'antes de' */
+    content: ""; /*importante para los seudo-elementos */
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #213f8f;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+
+    position: absolute; /*indico una posicion absoluta que depende del contenedor padre en esta caso el de clase SELECT (que tiene una posicion relativa, esto ayuda a que se posicione segun la caja de select y no la pagina en si)*/
+    bottom: -31px; /*lo posciono en el eje y=-30*/
+    left: calc(50% - 15px); /* el - 15 responde a que el triangulo toma desde la esquina superior derecha pasandose 30px */
+}
+
+.select i {
+    font-size: 30px;
+    margin-left: 30px;
+    color: #213f8f;
+}
+
+.titulo {
+    /* margin-bottom: 10px; */
+    color: #000;
+
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.descripcion {
+    font-size: 18px;
+    color: #434343;
+}
+
+/*estilos opciones*/
+.opciones {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    max-height: 400px; /*aca limito el contendor de opciones a una altra menor o igual a 400px*/
+    overflow: auto; /*con esto solucionamos el desborde de contenido, diciendo que el contenido sobrante lo oculte, al ser AUTO coloca el scroll en ves de HIDDEN que solo lo oculta*/
+    z-index: 100; /*asi queda sobre otros elementos*/
+    width: 100%;
+
+    display: none; /*ocultamos las opciones*/
+}
+
+.opciones.active { /*con esto muestra el contenido cuando JS agrege la clase ACTIVE a OPCIONES*/
+    display: block;
+    animation: fadeIn .3s forwards; /* con el forwards no se reinicia la animacion, aca ctivamos la animacion descrita abajo*/
+}
+
+/*animacion*/
+@keyframes fadeIn {
+    from {
+        transform: translateY(-200px) scale(.5);
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+/*fin animacion*/
+
+.contenido-opcion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all; /*esta transicion es para el efecto hover */
+}
+
+.opciones .contenido-opcion {
+    padding: 30px;
+}
+
+.contenido-opcion img {
+    width: 60px;
+    height: 60px;
+    margin-right: 30px;
+}
+
+.opciones .contenido-opcion:hover {
+    background: #213f8f;
+}
+
+.opciones .contenido-opcion:hover .titulo ,
+.opciones .contenido-opcion:hover .descripcion {
+    color: #fff;
+}
+
+/* FINAL ==================================================ESTYLO PARA SELECTBOX */
+/* ================== BREAKPOINT */
+
+@media(min-width: 577px) {
+
+    .container {
+        display: grid;
+        grid-template-areas: 
+        "cabecera filtros-de-busqueda"
+        "cabecera seccion-principal"
+        "pie-de-pagina seccion-principal";
+
+        grid-template-columns: 202px auto;
+        grid-template-rows: 113px 10fr 90px;
+    }
+
+    .list__button {
+        display: none;
+    }
+
+    .list__show {
+        display: block;
+        height: 100%;
+        padding-right: 0;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .selectbox {
+        width: 92%; /* el width debe abarcar el 100% en un dispositivo movil */
+    }
+}
+
+/* INICIO ========================================== ESTYLO ICON HAMBURGUESA */
+
+.toggle { /* contenedor del icono */
+    width: 4rem;
+    height: 2rem;
+    margin: 14px 0;
+
+    display: flex; /* se usa flexbox para centrar la linea de la hamburguesa*/
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.toggle__line,
+.toggle__line::after, 
+.toggle__line::before { /* se crea una linea de la hamburguesa y se replican para la version after y before */
+    position: relative;
+    width: 88%;
+    height: 0.3rem;
+    background-color: #fff;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+
+    /* aca se agrega una transition (o tiempo que tarda esta transicion)
+    para hermocear la animacion. tiempo que toma el background, el top y el trasform en aplicarse*/
+    /*transition: background .3s, top .4s, trasform .5s;*/
+    transition-property: background, top, transform;
+    transition-delay: 0s, 0.2s, 0s;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+}
+
+/* aca se crean las siguientes dos lineas superior e inferior con los seudo elemntos before y after */
+.toggle__line::after , .toggle__line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+
+    top: 13px;
+}
+
+.toggle__line::before {
+    top: -13px;
+}
+
+/* aca empieza la animación que se activara junto a JS */
+.active .toggle__line::after { /* la clase "active" se agregara mediante JS*/
+    top: 0; /* al ser '0' colapsa hacia el centro */
+    transform: rotate(45deg); /* esto lo rota 45 grados positivo */
+    transition-delay: 0s,0s,.2s; /* este delay solo sucede cuando se activa la clase 'active' */
+}
+
+.active .toggle__line::before {
+    top: 0;
+    transform: rotate(-45deg); /* esto lo rota 45 grados negativos*/
+    transition-delay: 0s,0s,.2s;
+}
+
+.active .toggle__line {
+    background: transparent; /* con esto se oculta la linea central*/
+    box-shadow: none;
+}
+
+/* FINAL ========================================== ESTYLO PARA EL MENU MOVIL */

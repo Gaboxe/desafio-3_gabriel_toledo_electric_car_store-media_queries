@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Electric Cars</title>
+    <script src="https://kit.fontawesome.com/c9e8b6ef5c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+
+            <nav class="list__item list__item--click">
+
+                <div class="prueba-uno">
+
+                    <div class="logotipo"> <!-- logotipo -->
+                        <img class="img-logo" src="./assets/img/car__electric.png" alt="">
+                        <h2 class="logo"> Electric Cars</h2>
+                    </div>
+
+                    <div class="list__button list__button--click"> <!-- casilla que se clickea  para activar la lista y el menu hamburguesa-->
+
+                        <div class="toggle" id="toggle">
+                            <div class="toggle__line"></div>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="list__show arrow_dos"> <!-- lista que se muestra al click -->
+                    
+
+                    <div class="list__inside">
+                        <a class="nav__link nav__link--inside" href="#">Inicio</a> <!-- nav__link--inside, responde como un modificador-->
+                        
+                    </div>
+
+                    <div class="list__inside">
+                        <a class="nav__link nav__link--inside" href="#">Catálogo</a>
+                        
+                    </div>
+
+                    <div class="list__inside">
+                        <a class="nav__link nav__link--inside" href="#">Ofertas</a>
+                        
+                    </div>
+
+                    <div class="list__inside">
+                        <a class="nav__link nav__link--inside" href="#">Contacto</a>
+                        
+                    </div>
+                </div>
+
+
+            </nav>
+
+        </header>
+
+        <form>
+
+            <h3>Ordenar Por:</h3>
+
+            <div class="selectbox"> <!-- contenedor que simula ser un select -->
+
+                <div class="select " id="select"> <!-- === con JS se agragara aca la clase SELECT al click -->
+                    
+                    <dic class="contenido-select"> <!-- en este contenedor se mostrara lo seleccionado (esto se ejecuta con JS) -->
+                        <h4 class="titulo">Precio</h4>
+                    </dic>
+
+                    <i class="fa-solid fa-angle-right flecha"></i>
+                </div>
+
+                <!-- opciones  -->
+                <div class="opciones " id="opciones"> <!-- === con JS se agragara aca la clase SELECT al click -->
+                    
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <div class="textos">
+                                <h4 class="titulo">...</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <div class="textos">
+                                <h4 class="titulo">Precio</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                        
+                            <div class="textos">
+                                <h4 class="titulo">Mayor a Menor</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                        
+                            <div class="textos">
+                                <h4 class="titulo">Menor a Mayor</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                        
+                            <div class="textos">
+                                <h4 class="titulo">Más a Menos relevante</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                        
+                            <div class="textos">
+                                <h4 class="titulo">Menos a Más relevante</h4>
+    
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <input type="hidden" name="pais" id="inputSelect" value="">
+
+        </form>
+
+        <main> <!-- flex -->
+            
+            <div class="articulos"> <!-- flex -->
+
+                <div class="card"> <!-- articulo uno -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo dos -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo tres -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo cuatro -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo cinco -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo seis -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo siete -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+
+                <div class="card"> <!-- articulo ocho -->
+                    <div class="car-img">
+                        <img class="car" src="./assets/img/electr-car.webp" alt="imagen del producto">
+                    </div>
+                    <div class="cuerpo">
+                        <p class="modelo">Model: City Car</p>
+                    </div>
+
+                    <div class="cont-button">
+                        <button>Ver más</button>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="selec-de-pagina"> <!-- 'flex' aca ira el Pagination -->
+                
+                <ul class="paginas">
+
+                    <li> <a class="after link--pag" href="#"><i class="fa-solid fa-angles-left"></i></a> </li>
+                    
+                    <li> <a class="link--pag" href="#">1</a> </li>
+
+                    <li> <a class="dos link--pag" href="#">2</a> </li>
+
+                    <li> <a class="link--pag" href="#">3</a> </li>
+
+                    <li> <a class="next link--pag" href="#"><i class="fa-solid fa-angles-right"></i></a> </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer> <!-- flex -->
+
+            <div class="face-inst">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="txt-footer">Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="./assets/js/main.js"></script> <!-- conexion al archivo de JS -->
+</body>
+</html>
